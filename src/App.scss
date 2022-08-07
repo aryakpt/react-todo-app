@@ -1,0 +1,125 @@
+@use "./scss/" as *;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+}
+
+.btn-primary {
+  padding: 8px 10px;
+  border: none;
+  background: rgb(137, 208, 255);
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background: rgb(97, 192, 255);
+  transition: 0.2s;
+}
+
+.btn-danger {
+  padding: 8px 10px;
+  border: none;
+  background: rgb(255, 137, 137);
+  cursor: pointer;
+}
+.btn-danger:hover {
+  background: rgb(255, 97, 97);
+  transition: 0.2s;
+}
+
+/* Component Todo */
+
+.todo {
+  min-height: 100vh;
+  background: linear-gradient(45deg, rgb(255, 255, 65), rgb(255, 55, 55));
+}
+
+.todo h1 {
+  text-align: center;
+  padding: 40px;
+}
+
+.todo-list {
+  display: flex;
+}
+
+.todo-list h2 {
+  text-align: center;
+  margin: 20px;
+}
+
+.todo-list .todo-list-completed {
+  flex: 1;
+  padding: 2rem;
+}
+
+.todo-list .todo-list-uncompleted {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Component Todo Card */
+.todo-list .card-title {
+  width: 70%;
+}
+.todo-list .card-body {
+  width: 70%;
+  text-align: justify;
+  color: rgb(236, 236, 236);
+}
+
+.todo-list .card {
+  position: relative;
+  padding: 20px;
+  margin: 15px auto;
+  border: solid 1px rgb(37, 37, 37);
+  box-shadow: 0px 0px 10px rgba(200, 200, 200, 0.22);
+}
+
+.todo-list .card .card-button {
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  right: 3%;
+}
+
+.todo-list .todo-list-completed .card {
+  border: none;
+  background: linear-gradient(to top right, #76bb81, rgb(54, 177, 54));
+  color: white;
+}
+
+.todo-list .todo-list-uncompleted .card {
+  border: none;
+  background: linear-gradient(to top right, #ea71ff, #de20ff);
+  color: white;
+}
+.todo-list .todo-list-uncompleted .card.red {
+  border: none;
+  background: linear-gradient(to top right, #ff629e, rgb(255, 23, 131));
+}
+
+/* Component Todo Form */
+.todo-form {
+  width: 30%;
+  margin: 10px auto;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.144);
+  background: whitesmoke;
+}
+
+.todo-form form div {
+  margin-bottom: 10px;
+}
+
+.todo-form form div input,
+textarea {
+  width: 100%;
+  min-height: 30px;
+}
